@@ -4,7 +4,7 @@ body {
     box-sizing: border-box;
 }
 nav {
-    padding: 0 10%;
+    padding: 2%  10% 0 10%;
 }
 
 nav {
@@ -15,6 +15,7 @@ nav {
 .logo {
     display: inline-flex;
     direction: rtl;
+    align-items: center;
 }
 .logo img {
     width: 30px;
@@ -54,4 +55,41 @@ nav > button {
     height: 3px;
     background-color: rgb(23,148,255);
     margin: 5px;
+}
+@media screen and (max-width: 1024px)
+{
+    nav > button {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 768px)
+{
+    body {
+        overflow-x: hidden;
+    }
+    .nav-links {
+        position: absolute;
+        right: 0px;
+        height: 93vh;
+        top: 10vh;
+        background-color: rgb(230,240,255);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        width: 100%;
+        transform: translateX(-100%);
+        transition: 0.5s ease-in;
+    }
+    .nav-links > li {
+        opacity: 100;
+    }
+    .burger {
+        display: block;
+        cursor: pointer;
+    }
+    .nav-active {
+        transform: translateX(0%);
+    }
 }
