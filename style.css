@@ -3,6 +3,15 @@ body {
     padding: 0;
     box-sizing: border-box;
 }
+nav {
+    padding: 0 10%;
+}
+
+nav {
+    display: flex;
+    direction: rtl;
+    justify-content: space-between;
+}
 .logo {
     display: inline-flex;
     direction: rtl;
@@ -36,4 +45,13 @@ nav > button {
     font-weight: bold;
     border:none;
     border-radius: 10px;
+}
+.burger {
+    display: none;
+}
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: rgb(23,148,255);
+    margin: 5px;
 }
