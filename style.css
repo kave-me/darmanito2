@@ -3,7 +3,7 @@ body {
     padding: 0;
     box-sizing: border-box;
 }
-nav, .header, .about, .features, .features-title {
+nav, .header, .about{
     padding: 2%  10% 0 10%;
 }
 
@@ -121,99 +121,6 @@ padding-top: 5rem;
 justify-content: space-between;
 }
 /* FEATURES SECTION */
-.feature-icons {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    grid-template-areas: 
-    "icon1 icon2"
-    "icon3 icon4";
-    /* width: auto;
-    height: 1rem; */
-    gap:2rem;
-    border-radius: 10px;
-
-}
-.icon1{
-    grid-area: icon1;
-}
-.icon2{
-    grid-area: icon2;
-}
-.icon3{
-    grid-area: icon3;
-}
-.icon4{
-    grid-area: icon4;
-}
-.features{
-    display: flex;
-    flex-direction: column;
-}
-.features-container{
-    display: flex;
-    flex-direction: row-reverse;
-    align-items: center;
-    justify-content: space-around;
-}
-.features-title {
-    color: rgb(23,148,255);
-    direction: rtl;
-    padding-right: 5px;
-    border-right: 5px solid rgb(0,222,154);
-}
-.feature-icon {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 9rem;
-    height: 8rem;
-    padding-top: 1rem;
-    border-radius: 10px;
-    /* padding-top: 2rem; */
-    font-size: 0.8rem;
-    box-shadow: 0 0 10px rgba(46, 57, 66, 0.3);
-}
-.feature-icon img {
-    filter: grayscale(100%);
-    width: 50px;
-    height: 50px;
-}
-.feature-icon-enable img{
-    filter: none;
-}
-.feature-item {
-    display: flex;
-    direction: rtl;
-}
-.feature-item h4 {
-    padding-right: 1rem;
-}
-.feature-item p {
-    padding-top: 3.5rem;
-}
-.feature-item-icon-title
-{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    /* font-color: rgb(23,148,255); */
-}
-.feature-item-icon-title img {
-    background-color: rgb(230,240,255);
-    padding: 0.5rem;
-    border-radius: 2rem;
-    width: 1rem;
-    height: auto;
-}
-.check img {
-    background-color: rgb(0,222,154);
-    padding: 0.65rem 0.5rem;
-    border-radius: 2rem;
-    width: 1rem;
-    height: auto;
-}
 
 @media screen and (max-width: 1024px)
 {
@@ -260,7 +167,6 @@ justify-content: space-between;
         align-items: center;
         margin-bottom: 1rem;
     }
-    
     .about {
         flex-direction: column;
         align-items: center;
@@ -271,4 +177,5 @@ justify-content: space-between;
     .about-icons {
         display: none;
     }
+
 }
