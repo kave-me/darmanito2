@@ -3,7 +3,7 @@ body {
     padding: 0;
     box-sizing: border-box;
 }
-nav, .header, .about, .features, .download, .subscribe{
+nav, .header, .about, .features, .download, .subscribe, .support{
 
     padding: 2%  10% 0 10%;
     margin-bottom: 5%;
@@ -243,7 +243,7 @@ justify-content: space-between;
     grid-area: dl-title;
     color: white;
     direction: rtl;
-    font-size: 1.5rem;
+    font-size: 1.1rem;
     /* text-align: center; */
     vertical-align: center;
 }
@@ -403,6 +403,36 @@ justify-content: space-between;
     border: none;
     font-size: 1rem;
 }
+/* SUPPORT SECTION */
+.support {
+    background-color: rgb(9,141,255);
+    color: white;
+    display: flex;
+    direction: rtl;
+    justify-content: space-between;
+    align-items: center;
+    gap:1fr;
+    /* height: 20vh; */
+}
+.support .text {
+    display: flex;
+    gap:1rem;
+    align-items: center;
+    justify-content: center;
+}
+.support button{
+    background-color: rgb(35, 97, 181);
+    color: white;
+    direction: rtl;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:1rem;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    width: 15%;
+}
 @media screen and (max-width: 1024px)
 {
     nav > button {
@@ -513,5 +543,15 @@ justify-content: space-between;
     .subscribe-input-container {
     width: 100%;
     height: 70%;
+    }
+    .support {
+        flex-direction: column;
+    }
+    .support .text {
+        flex-direction: column;
+    }
+    .support button{
+        width: 50%;
+        margin-bottom: 2rem;
     }
 }
