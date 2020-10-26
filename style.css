@@ -3,10 +3,11 @@ body {
     padding: 0;
     box-sizing: border-box;
 }
-nav, .header, .about, .features{
-    padding: 2%  10% 0 10%;
-}
+nav, .header, .about, .features, .download{
 
+    padding: 2%  10% 0 10%;
+    margin-bottom: 5%;
+}
 nav {
     display: flex;
     direction: rtl;
@@ -214,7 +215,117 @@ justify-content: space-between;
 .feature3 img {
     background-color: rgb(0,222,154);
 }
+/* DOWNLOAD SECTION */
+.download {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas:
+    "dl-img dl-title"
+    "dl-img dl-input"
+    "dl-img dl-icons";
+    background-color: rgb(9,141,255);
+}
+.download-img {
+    grid-area: dl-img;
 
+}
+.download-img img{
+    width: 300px;
+    height: auto;
+    border-top-left-radius: 10%;
+    border-top-right-radius: 10%;
+}
+.download-title {
+    grid-area: dl-title;
+    color: white;
+    direction: rtl;
+    font-size: 1.5rem;
+    /* text-align: center; */
+    vertical-align: center;
+}
+.download-input {
+    grid-area: dl-input;
+    display: flex;
+    justify-content: center;
+}
+.download-input-container {
+    display: flex;
+    background-color: white;
+    width: 70%;
+    height: 40%;
+    border-radius: 10px;
+    justify-content: space-around;
+    align-items: center;
+    direction: ltr;
+}
+.download-input-container input {
+    border: none;
+    width: 70%;
+    height: 80%;
+}
+.download-input-container input::placeholder {
+    direction: rtl;
+    text-align: center;
+    font-size: 1rem;
+}
+.download-input-container input:focus {
+    outline: none;
+    direction: rtl;
+    font-size: 1rem;
+}
+.download-input-container button {
+    width: 17%;
+    height: 70%;
+    background-color: rgb(9,141,255);
+    color: white;
+    border-radius: 10px;
+    border: none;
+    font-size: 1rem;
+}
+.download-icons {
+    grid-area: dl-icons;
+    display: flex;
+    justify-content: space-around;
+    /* width: 50%; */
+}
+.download-icon {
+    cursor: pointer;
+    background-color: rgb(35, 97, 181);
+    width: 30%;
+    height: 60px;
+    border-radius: 10px;
+    color: white;
+}
+.sib-app {
+    font-size: 0.7rem;
+    direction: rtl;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    gap:1rem
+}
+.bazar-icon {
+    display: flex;
+    direction: rtl;
+    gap: 1rem;
+    align-items: flex-end;
+    justify-content: center;
+}
+.bazar-icon img{
+    width: 2.5rem;
+}
+.android-icon {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    justify-content: center;
+    align-content: center;
+    font-size: 1rem ;
+}
+.android-icon img{
+    width: 1rem;
+}
 @media screen and (max-width: 1024px)
 {
     nav > button {
@@ -251,7 +362,6 @@ justify-content: space-between;
         transform: translateX(0%);
     }
     .header {
-
         flex-direction: column-reverse;
     }
     .header button{
@@ -273,11 +383,10 @@ justify-content: space-between;
     .about-icons {
         display: none;
     }
-
     .features-container {
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: 1fr 0.5fr 2fr;
+        grid-template-rows: 1fr 0.5fr 1fr;
         grid-template-areas: 
         "f-icons"
         "f-desc"
@@ -286,5 +395,33 @@ justify-content: space-between;
     }
     .features-description h4{
         margin-bottom: 0px;
+    }
+    .download {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.6fr 0.4fr 0.5fr 1.5fr;
+        grid-template-areas:
+        "dl-title"
+        "dl-input"
+        "dl-icons"
+        "dl-img";
+        background-color: rgb(9,141,255);
+    }
+    .download-img img{
+        width: 70%;
+    }
+    .download-img{
+        display: flex;
+        justify-self: center;
+        padding-left: 100px;
+    }
+    .download-icon {
+        width: 12rem;
+    }
+    .download-icons {
+        flex-direction: column;
+        justify-self: center;
+        gap: 1rem;
+        margin-bottom: 3rem;
     }
 }
