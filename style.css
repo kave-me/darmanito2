@@ -8,6 +8,9 @@ nav, .header, .about, .features, .download, .subscribe, .support{
     padding: 2%  10% 0 10%;
     margin-bottom: 5%;
 }
+footer{
+    padding: 0  10% 0 10%;
+}
 nav {
     display: flex;
     direction: rtl;
@@ -432,6 +435,62 @@ justify-content: space-between;
     border: none;
     cursor: pointer;
     width: 15%;
+}
+footer {
+    display: grid;
+    grid-template-columns: 0.5fr 0.25fr 0.25fr 0.5fr;
+    grid-template-rows: repeat(3, 0.25fr);
+    grid-template-areas:
+    "ft-dl ft-pages ft-services ft-logo"
+    "ft-dl ft-pages ft-services ft-desc"
+    "ft-dl ft-pages ft-services ft-sm";
+    gap: 1rem;
+}
+footer .logo {
+    grid-area: ft-logo;
+    direction: rtl;
+    justify-content: flex-start;
+}
+footer .description {
+    grid-area: ft-desc;
+    direction: rtl;
+}
+footer .socialmedia {
+    grid-area: ft-sm;
+    display: flex;
+    direction: rtl;
+    justify-content: center;
+    gap:1rem;
+}
+footer .socialmedia img{
+    grid-area: ft-sm;
+    width: 1rem;
+}
+footer .services {
+    grid-area: ft-services;
+    display: flex;
+    flex-direction: column;
+
+    margin:0;
+}
+/* footer .services strong{
+    text-align: center;
+    vertical-align: middle;
+} */
+footer .services ul{
+    line-height: 44px;
+    list-style: none;
+
+}
+footer .services a{
+    text-decoration: none;
+    color: black;
+}
+footer .pages {
+    grid-area: ft-pages;
+}
+footer .footer-download {
+    grid-area: ft-dl;
 }
 @media screen and (max-width: 1024px)
 {
