@@ -234,7 +234,7 @@ justify-content: space-between;
 }
 .download-img {
     grid-area: dl-img;
-
+    display: flex;
 }
 .download-img img{
     width: 300px;
@@ -293,13 +293,17 @@ justify-content: space-between;
 .download-icons {
     grid-area: dl-icons;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 1rem;
+    /* flex-grow: 10px; */
     /* width: 50%; */
 }
 .download-icon {
     cursor: pointer;
     background-color: rgb(35, 97, 181);
-    width: 30%;
+    width: 180px;
     height: 60px;
     border-radius: 10px;
     color: white;
@@ -316,11 +320,11 @@ justify-content: space-between;
     display: flex;
     direction: rtl;
     gap: 1rem;
-    align-items: flex-end;
+    align-items: center;
     justify-content: center;
 }
 .bazar-icon img{
-    width: 2.5rem;
+    width: 2rem;
 }
 .android-icon {
     display: flex;
@@ -331,7 +335,7 @@ justify-content: space-between;
     font-size: 1rem ;
 }
 .android-icon img{
-    width: 1rem;
+    width: 2rem;
 }
 /* SUBSCRIBE SECTION */
 .subscribe-container {
@@ -434,7 +438,9 @@ justify-content: space-between;
     border-radius: 10px;
     border: none;
     cursor: pointer;
-    width: 15%;
+    width: 200px;
+    height: 4rem;
+    margin-bottom: 2rem;
 }
 footer {
     display: grid;
@@ -459,38 +465,101 @@ footer .socialmedia {
     grid-area: ft-sm;
     display: flex;
     direction: rtl;
-    justify-content: center;
+    justify-content: end;
     gap:1rem;
 }
 footer .socialmedia img{
     grid-area: ft-sm;
-    width: 1rem;
+    /* width: 1rem; */
 }
 footer .services {
     grid-area: ft-services;
     display: flex;
     flex-direction: column;
-
     margin:0;
+    /* align-items: center; */
+    direction: rtl;
 }
-/* footer .services strong{
-    text-align: center;
-    vertical-align: middle;
-} */
 footer .services ul{
     line-height: 44px;
     list-style: none;
-
+    padding: 0;
 }
-footer .services a{
+footer .pages ul{
+    line-height: 44px;
+    list-style: none;
+    padding: 0;
+}
+footer  a{
     text-decoration: none;
-    color: black;
+    color: rgb(80, 80, 80);
+}
+footer  a:hover{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    border-right:2px solid rgb(0,222,154);
+    padding-right: 10px;
+    transition: 0.3s;
 }
 footer .pages {
     grid-area: ft-pages;
+    direction: rtl;
 }
 footer .footer-download {
     grid-area: ft-dl;
+    display: flex;
+    flex-direction: column;
+    direction: rtl;
+}
+footer .download-icons {
+    flex-wrap: wrap;
+    gap:1rem;
+}
+.download-bazar
+{
+    background-color: black;
+    color: white;
+    padding: 10px;
+    width: 180px;
+    height: 30px;
+    border-radius: 10px;
+    display: flex;
+    direction: rtl;
+    gap:1rem;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+}
+.download-sib-app
+{
+    background-color: black;
+    color: white;
+    padding: 10px;
+    width: 180px;
+    height: 30px;
+    border-radius: 10px;
+    display: flex;
+    direction: rtl;
+    gap:1rem;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+}
+.download-sib-app img
+{
+    width: 30px;
+}
+.download-sib-app .text img
+{
+    width: 80px;
+}
+.download-sib-app .text p
+{
+    font-size: 0.8rem;
+    gap: 0px;
+    padding : 0px;
+    line-height: 0px;
 }
 @media screen and (max-width: 1024px)
 {
@@ -597,7 +666,7 @@ footer .footer-download {
         "sb-img"
         "sb-text"
         "sb-input";
-        height: 380px;
+        height: 500px;
     }
     .subscribe-input-container {
     width: 100%;
@@ -612,5 +681,35 @@ footer .footer-download {
     .support button{
         width: 50%;
         margin-bottom: 2rem;
+    }
+    footer {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 0.25fr);
+        grid-template-areas:
+        "ft-logo"
+        "ft-desc"
+        "ft-sm";
+        gap: 1rem;
+    }
+    footer .socialmedia {
+        justify-content: center;
+    }
+    footer .logo {
+        justify-content: center;
+    }
+    footer .description {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    footer .footer-download {
+        display: none;
+    }
+    footer .services {
+        display: none;
+    }
+    footer .pages {
+        display: none;
     }
 }
